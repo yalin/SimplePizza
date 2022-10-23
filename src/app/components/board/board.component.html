@@ -1,0 +1,160 @@
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th rowspan="2" class="text-center">Toppings</th>
+      <th colspan="4" class="text-center">Pizza Size</th>
+    </tr>
+    <tr>
+      <td class="tab-cap" *ngFor="let size of sizes">
+        {{getSizeCaption(size)}}
+      </td>
+    </tr>
+    <tr>
+      <th colspan="5">Veg Toppings</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Tomatoes ($1.00)</td>
+      <td class="text-center">
+        <input type="checkbox" style="width: 20px;height: 20px;" />
+      </td>
+      <td class="text-center">
+        <input type="checkbox" style="width: 20px;height: 20px;" />
+      </td>
+      <td class="text-center">
+        <input type="checkbox" style="width: 20px;height: 20px;" />
+      </td>
+      <td class="text-center">
+        <input type="checkbox" style="width: 20px;height: 20px;" />
+      </td>
+    </tr>
+    <tr>
+      <td>Onions ($0.50)</td>
+      <td class="text-center">
+        <input type="checkbox" style="width: 20px;height: 20px;" />
+      </td>
+      <td class="text-center">
+        <input type="checkbox" style="width: 20px;height: 20px;" />
+      </td>
+      <td class="text-center">
+        <input type="checkbox" style="width: 20px;height: 20px;" />
+      </td>
+      <td class="text-center">
+        <input type="checkbox" style="width: 20px;height: 20px;" />
+      </td>
+    </tr>
+    <tr>
+      <td>Bell Pepper ($1.00)</td>
+      <td class="text-center">
+        <input type="checkbox" style="width: 20px;height: 20px;" />
+      </td>
+      <td class="text-center">
+        <input type="checkbox" style="width: 20px;height: 20px;" />
+      </td>
+      <td class="text-center">
+        <input type="checkbox" style="width: 20px;height: 20px;" />
+      </td>
+      <td class="text-center">
+        <input type="checkbox" style="width: 20px;height: 20px;" />
+      </td>
+    </tr>
+    <tr>
+      <td>Mushrooms ($1.20)</td>
+      <td class="text-center">
+        <input type="checkbox" style="width: 20px;height: 20px;" />
+      </td>
+      <td class="text-center">
+        <input type="checkbox" style="width: 20px;height: 20px;" />
+      </td>
+      <td class="text-center">
+        <input type="checkbox" style="width: 20px;height: 20px;" />
+      </td>
+      <td class="text-center">
+        <input type="checkbox" style="width: 20px;height: 20px;" />
+      </td>
+    </tr>
+    <tr>
+      <td>Pineapple ($0.75)</td>
+      <td class="text-center">
+        <input type="checkbox" style="width: 20px;height: 20px;" />
+      </td>
+      <td class="text-center">
+        <input type="checkbox" style="width: 20px;height: 20px;" />
+      </td>
+      <td class="text-center">
+        <input type="checkbox" style="width: 20px;height: 20px;" />
+      </td>
+      <td class="text-center">
+        <input type="checkbox" style="width: 20px;height: 20px;" />
+      </td>
+    </tr>
+    <tr>
+      <th colspan="5">Non Veg Toppings</th>
+    </tr>
+    <tr>
+      <td>Sausage ($1.00)</td>
+      <td class="text-center">
+        <input type="checkbox" style="width: 20px;height: 20px;" />
+      </td>
+      <td class="text-center">
+        <input type="checkbox" style="width: 20px;height: 20px;" />
+      </td>
+      <td class="text-center">
+        <input type="checkbox" style="width: 20px;height: 20px;" />
+      </td>
+      <td class="text-center">
+        <input type="checkbox" style="width: 20px;height: 20px;" />
+      </td>
+    </tr>
+    <tr>
+      <td>Pepperoni ($2.00)</td>
+      <td class="text-center">
+        <input type="checkbox" style="width: 20px;height: 20px;" />
+      </td>
+      <td class="text-center">
+        <input type="checkbox" style="width: 20px;height: 20px;" />
+      </td>
+      <td class="text-center">
+        <input type="checkbox" style="width: 20px;height: 20px;" />
+      </td>
+      <td class="text-center">
+        <input type="checkbox" style="width: 20px;height: 20px;" />
+      </td>
+    </tr>
+    <tr>
+      <td>Barbecue chicken ($3.00)</td>
+      <td class="text-center">
+        <input type="checkbox" style="width: 20px;height: 20px;" />
+      </td>
+      <td class="text-center">
+        <input type="checkbox" style="width: 20px;height: 20px;" />
+      </td>
+      <td class="text-center">
+        <input type="checkbox" style="width: 20px;height: 20px;" />
+      </td>
+      <td class="text-center">
+        <input type="checkbox" style="width: 20px;height: 20px;" />
+      </td>
+    </tr>
+    <tr>
+      <th colspan="5">
+        Total
+      </th>
+    </tr>
+    <tr>
+      <td>Offer</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
