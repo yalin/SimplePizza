@@ -57,49 +57,49 @@ export const environment = {
       name: 'Tomatoes',
       price: 1,
       vegan: true,
-      rate: 1
+      weight: 1
     },
     {
       name: 'Onions',
       price: 0.5,
       vegan: true,
-      rate: 1
+      weight: 1
     },
     {
       name: 'Bell pepper',
       price: 1,
       vegan: true,
-      rate: 1
+      weight: 1
     },
     {
       name: 'Mushrooms',
       price: 1.2,
       vegan: true,
-      rate: 1
+      weight: 1
     },
     {
       name: 'Pineapple',
       price: 0.75,
       vegan: true,
-      rate: 1
+      weight: 1
     },
     {
       name: 'Sausage',
       price: 1,
       vegan: false,
-      rate: 1
+      weight: 1
     },
     {
       name: 'Pepperoni',
       price: 2,
       vegan: false,
-      rate: 2
+      weight: 2
     },
     {
       name: 'Barbecue',
       price: 3,
       vegan: false,
-      rate: 2
+      weight: 2
     }
   ]
 }

@@ -6,34 +6,37 @@ import { environment } from 'src/environments/environment'
 @Injectable({
   providedIn: 'root'
 })
+
+//
 export class OrderService {
-  sizes: SizeClass[]
-  toppings: ToppingClass[]
+  sizeList: SizeClass[]
+  vegToppings: ToppingClass[]
+  nonVegToppings: ToppingClass[]
 
   constructor () {
-
-    this.reset()
+    this.init()
   }
 
-  reset (): void {
+  init (): void {
     const sizes = []
     environment.pizzaSizes.forEach(x => {
       sizes.push(x)
     })
-    this.sizes = sizes
+    this.sizeList = sizes
 
-    const toppings = []
+    // seperated vegan and non-vegan arrays
+    const nvtoppings = []
+    const vtoppings = []
     environment.pizzaToppings.forEach(x => {
-      toppings.push(x)
+      // if vegan push into vegan array
+      if (x.vegan) {
+        vtoppings.push(x)
+      } else {
+        // if non-vegan push into non-vegan array
+        nvtoppings.push(x)
+      }
     })
-    this.toppings = toppings
-
-    // error: string;
-
-    // eraseError(): void {
-    //     setTimeout(() => {
-    //         this.error = undefined;
-    //     }, 5000)
-    //   }
+    this.vegToppings = vtoppings
+    this.nonVegToppings = nvtoppings
   }
 }

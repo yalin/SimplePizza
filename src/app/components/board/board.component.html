@@ -5,8 +5,8 @@
       <th colspan="4" class="text-center">Pizza Size</th>
     </tr>
     <tr>
-      <td class="tab-cap" *ngFor="let size of sizes">
-        {{getSizeCaption(size)}}
+      <td class="tab-cap" *ngFor="let size of sizeList">
+        {{getSizesText(size)}}
       </td>
     </tr>
     <tr>
@@ -14,147 +14,59 @@
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td>Tomatoes ($1.00)</td>
-      <td class="text-center">
-        <input type="checkbox" style="width: 20px;height: 20px;" />
+    <tr *ngFor="let vtopping of vegToppingList">
+      <td>
+        {{getToppingsText(vtopping)}}
       </td>
-      <td class="text-center">
-        <input type="checkbox" style="width: 20px;height: 20px;" />
-      </td>
-      <td class="text-center">
-        <input type="checkbox" style="width: 20px;height: 20px;" />
-      </td>
-      <td class="text-center">
-        <input type="checkbox" style="width: 20px;height: 20px;" />
-      </td>
-    </tr>
-    <tr>
-      <td>Onions ($0.50)</td>
-      <td class="text-center">
-        <input type="checkbox" style="width: 20px;height: 20px;" />
-      </td>
-      <td class="text-center">
-        <input type="checkbox" style="width: 20px;height: 20px;" />
-      </td>
-      <td class="text-center">
-        <input type="checkbox" style="width: 20px;height: 20px;" />
-      </td>
-      <td class="text-center">
-        <input type="checkbox" style="width: 20px;height: 20px;" />
-      </td>
-    </tr>
-    <tr>
-      <td>Bell Pepper ($1.00)</td>
-      <td class="text-center">
-        <input type="checkbox" style="width: 20px;height: 20px;" />
-      </td>
-      <td class="text-center">
-        <input type="checkbox" style="width: 20px;height: 20px;" />
-      </td>
-      <td class="text-center">
-        <input type="checkbox" style="width: 20px;height: 20px;" />
-      </td>
-      <td class="text-center">
-        <input type="checkbox" style="width: 20px;height: 20px;" />
-      </td>
-    </tr>
-    <tr>
-      <td>Mushrooms ($1.20)</td>
-      <td class="text-center">
-        <input type="checkbox" style="width: 20px;height: 20px;" />
-      </td>
-      <td class="text-center">
-        <input type="checkbox" style="width: 20px;height: 20px;" />
-      </td>
-      <td class="text-center">
-        <input type="checkbox" style="width: 20px;height: 20px;" />
-      </td>
-      <td class="text-center">
-        <input type="checkbox" style="width: 20px;height: 20px;" />
-      </td>
-    </tr>
-    <tr>
-      <td>Pineapple ($0.75)</td>
-      <td class="text-center">
-        <input type="checkbox" style="width: 20px;height: 20px;" />
-      </td>
-      <td class="text-center">
-        <input type="checkbox" style="width: 20px;height: 20px;" />
-      </td>
-      <td class="text-center">
-        <input type="checkbox" style="width: 20px;height: 20px;" />
-      </td>
-      <td class="text-center">
-        <input type="checkbox" style="width: 20px;height: 20px;" />
+      <td class="text-center" *ngFor="let size of sizeList">
+        <app-selection [size]="size" [topping]="vtopping"> </app-selection>
       </td>
     </tr>
     <tr>
       <th colspan="5">Non Veg Toppings</th>
     </tr>
-    <tr>
-      <td>Sausage ($1.00)</td>
-      <td class="text-center">
-        <input type="checkbox" style="width: 20px;height: 20px;" />
+    <tr *ngFor="let nvtopping of nonVegToppingList">
+      <td>
+        {{getToppingsText(nvtopping)}}
       </td>
-      <td class="text-center">
-        <input type="checkbox" style="width: 20px;height: 20px;" />
-      </td>
-      <td class="text-center">
-        <input type="checkbox" style="width: 20px;height: 20px;" />
-      </td>
-      <td class="text-center">
-        <input type="checkbox" style="width: 20px;height: 20px;" />
+      <td class="text-center" *ngFor="let size of sizeList">
+        <app-selection [size]="size" [topping]="nvtopping"> </app-selection>
       </td>
     </tr>
     <tr>
-      <td>Pepperoni ($2.00)</td>
-      <td class="text-center">
-        <input type="checkbox" style="width: 20px;height: 20px;" />
-      </td>
-      <td class="text-center">
-        <input type="checkbox" style="width: 20px;height: 20px;" />
-      </td>
-      <td class="text-center">
-        <input type="checkbox" style="width: 20px;height: 20px;" />
-      </td>
-      <td class="text-center">
-        <input type="checkbox" style="width: 20px;height: 20px;" />
-      </td>
-    </tr>
-    <tr>
-      <td>Barbecue chicken ($3.00)</td>
-      <td class="text-center">
-        <input type="checkbox" style="width: 20px;height: 20px;" />
-      </td>
-      <td class="text-center">
-        <input type="checkbox" style="width: 20px;height: 20px;" />
-      </td>
-      <td class="text-center">
-        <input type="checkbox" style="width: 20px;height: 20px;" />
-      </td>
-      <td class="text-center">
-        <input type="checkbox" style="width: 20px;height: 20px;" />
-      </td>
-    </tr>
-    <tr>
-      <th colspan="5">
+      <th colspan="5" style="background-color: #dceaf6;">
         Total
       </th>
     </tr>
     <tr>
       <td>Offer</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td class="tab-col" *ngFor="let size of sizeList" style="text-align: center">
+        {{getOfferText(size, getOffer(size))}}
+      </td>
     </tr>
     <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td>Sub Total</td>
+      <td class="tab-col" *ngFor="let size of sizeList" style="text-align: center">
+        <s *ngIf="getOfferAmount(size, getOffer(size)) > 0">
+          {{getSubTotalTextWithoutDiscount(size)}}
+        </s>
+        <br />
+        {{getSubTotalText(size, getOffer(size), getSubTotal(size))}}
+      </td>
+    </tr>
+    <tr>
+      <td colspan="5">
+        <ul>
+          <li>Offer1 - 1 Medium Pizza with 2 topping = $5</li>
+          <li>Offer2 - 1 Medium Pizza with 4 topping = $9</li>
+          <li>
+            Offer3 - 1 Large Pizza with 2 toppings = %50 discount
+          </li>
+          <li>Pepperoni and Barbecue chicken are counted as 2 toppings</li>
+        </ul>
+      </td>
     </tr>
   </tbody>
 </table>
+
+Selected Toppings Count: {{getSelectedToppingsCount(sizeList)}}
